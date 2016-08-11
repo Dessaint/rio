@@ -1,0 +1,7 @@
+app_epreuves:
+    resource: "@AppBundle/Resources/config/routing/epreuves.yml"
+    prefix:   /epreuves
+
+app_participants:
+    resource: "@AppBundle/Resources/config/routing/participants.yml"
+    prefix:   /participants

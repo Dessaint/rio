@@ -1,0 +1,24 @@
+participants_index:
+    path:     /participants/
+    defaults: { _controller: "AppBundle:Participants:index" }
+    methods:  GET
+
+participants_show:
+    path:     /participants/{id}/show
+    defaults: { _controller: "AppBundle:Participants:show" }
+    methods:  GET
+
+participants_new:
+    path:     /participants/new
+    defaults: { _controller: "AppBundle:Participants:new" }
+    methods:  [GET, POST]
+
+participants_edit:
+    path:     /participants/{id}/edit
+    defaults: { _controller: "AppBundle:Participants:edit" }
+    methods:  [GET, POST]
+
+participants_delete:
+    path:     /participants/{id}/delete
+    defaults: { _controller: "AppBundle:Participants:delete" }
+    methods:  DELETE

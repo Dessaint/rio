@@ -1,0 +1,24 @@
+epreuves_index:
+    path:     /epreuves
+    defaults: { _controller: "AppBundle:Epreuves:index" }
+    methods:  GET
+
+epreuves_show:
+    path:     /epreuves/{id}/show
+    defaults: { _controller: "AppBundle:Epreuves:show" }
+    methods:  GET
+
+epreuves_new:
+    path:     epreuves/new
+    defaults: { _controller: "AppBundle:Epreuves:new" }
+    methods:  [GET, POST]
+
+epreuves_edit:
+    path:     epreuves/{id}/edit
+    defaults: { _controller: "AppBundle:Epreuves:edit" }
+    methods:  [GET, POST]
+
+epreuves_delete:
+    path:     epreuves/{id}/delete
+    defaults: { _controller: "AppBundle:Epreuves:delete" }
+    methods:  DELETE

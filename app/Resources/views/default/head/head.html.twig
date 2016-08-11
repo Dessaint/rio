@@ -1,0 +1,48 @@
+<div class="col-md-12 head">
+	<div class="col-md-2  text-center boite register">
+		<img src="{{ asset('img/new-user.png') }}"><a href="" data-toggle="modal" data-target="#myModal"><strong>S'enregistrer</strong></a>
+		<!-- Button trigger modal -->
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">S'enregistrer</h4>
+      </div>
+      <div class="modal-body">
+      	{{ render(controller('FOSUserBundle:Registration:register')) }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	</div>
+
+	<div class="col-md-8 text-center ">Bonjour <strong></strong></div>
+	<div class="col-md-2 text-center boite login ">
+		<img src="{{ asset('img/user.png') }}"><a href="" data-toggle="modal" data-target="#myModal1"><strong>Se connecter</strong></a>
+		<!-- Button trigger modal -->
+			<!-- Modal -->
+			<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Se connecter</h4>
+      </div>
+      <div class="modal-body">
+        {{ render(controller('FOSUserBundle:Security:login')) }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+			
+	</div>
+</div>

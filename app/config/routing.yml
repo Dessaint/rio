@@ -1,0 +1,83 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+natation:
+     path:     /natation
+     defaults: { _controller: AppBundle:Natation:index }
+
+login:
+    path:     login
+    defaults: { _controller: AppBundle:Security:login }
+
+login_check:
+    path:     login/check
+    defaults: { _controller: AppBundle:Security:check }
+
+register:
+    path:     register
+    defaults: { _controller: AppBundle:Registration:register }
+
+confirmed:
+    path:     confirmed
+    defaults: { _controller: AppBundle:Registration:confirmed }
+    
+logout:
+    path:     logout
+    defaults: { _controller: AppBundle:Security:logout }
+
+epreuves_index:
+    path:     /epreuves
+    defaults: { _controller: "AppBundle:Epreuves:index" }
+    methods:  GET
+
+epreuves_show:
+    path:     /epreuves/{id}/show
+    defaults: { _controller: "AppBundle:Epreuves:show" }
+    methods:  GET
+
+epreuves_new:
+    path:     epreuves/new
+    defaults: { _controller: "AppBundle:Epreuves:new" }
+    methods:  [GET, POST]
+
+epreuves_edit:
+    path:     epreuves/{id}/edit
+    defaults: { _controller: "AppBundle:Epreuves:edit" }
+    methods:  [GET, POST]
+
+epreuves_delete:
+    path:     epreuves/{id}/delete
+    defaults: { _controller: "AppBundle:Epreuves:delete" }
+    methods:  DELETE
+
+participants_index:
+    path:     /participants/
+    defaults: { _controller: "AppBundle:Participants:index" }
+    methods:  GET
+
+participants_show:
+    path:     /participants/{id}/show
+    defaults: { _controller: "AppBundle:Participants:show" }
+    methods:  GET
+
+participants_new:
+    path:     /participants/new
+    defaults: { _controller: "AppBundle:Participants:new" }
+    methods:  [GET, POST]
+
+participants_edit:
+    path:     /participants/{id}/edit
+    defaults: { _controller: "AppBundle:Participants:edit" }
+    methods:  [GET, POST]
+
+participants_delete:
+    path:     /participants/{id}/delete
+    defaults: { _controller: "AppBundle:Participants:delete" }
+    methods:  DELETE
+
+
